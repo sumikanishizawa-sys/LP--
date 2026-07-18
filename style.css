@@ -1,3 +1,9 @@
+html,body{
+    margin:0;
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+}
 body{
     margin:0;
     font-family: sans-serif;
@@ -105,7 +111,7 @@ header img{/*ヘッダーのロゴ設定*/
     display:flex;
     gap:6px;
     list-style:none; /*リストマークを削除する*/
-    padding:0 0 0 50px;
+    padding:0 80px 0 50px;
     margin:0;
 }
 .menu p{
@@ -139,10 +145,10 @@ header img{/*ヘッダーのロゴ設定*/
 }
 
 .header-buttons{
+    width:auto;
     display:flex;
     gap:10px;
-    margin-top:17px;
-    margin-left:500px;
+    padding:17px 80px 0 500px;
 }
 
 .CTAボタン,.Download-button{
@@ -193,23 +199,28 @@ border:0.5px solid #007BFF;
 }
 
 .advertisement{
-    display:inline-block;
     width: 100%; /* ファーストビューを画面幅いっぱいにする */
+    max-width:100%;
     background-image: url("./images/ファーストページの背景 (2).svg"); 
     background-size: cover; /* 背景画像を領域いっぱいに広げる */
     background-position: center; /* 背景画像を中央に配置する */
     background-repeat: no-repeat; /* 背景画像を繰り返さない */
     position: relative;
+    overflow:hidden;
 }
 .advertisement img{
     display:block;
+    width: 100%;
+    max-width:100%;
+    height:auto;
 }
 
 .夏季特別プログラムのファーストビュー{
     position:absolute;
     top:50px;
-    left:120px;
+    left:8%;
     margin:0;
+    max-width:40%;
 }
 
 .夏季特別プログラムのタイトル{
@@ -244,29 +255,33 @@ border:0.5px solid #007BFF;
 
 .広告上のキャッチコピー{
     margin:0;
-
+    position:absolute;
+    top:120px;
+    right:5%;
+    width:45%;
+    max-width:600px;
 }
+
 .広告上のキャッチコピー p{
     margin:0;
-    position:relative;
     font-size:45px;
     color:#3d3d3d;
     z-index:100;
     transform:rotate(2deg);
     text-align:center;
-    white-space:nowrap;
     line-height:80px;
     font-weight:500;
+    white-space:normal;
 }
 
 .キャッチコピーの強調線{
-    margin:0;
     position:absolute;
-    width:560px;
+    width:100%;
+    max-width: 560px;
     height:30px;
     background-color:#B7eeff;
     z-index:50;
     bottom:30px;
-    right:50px;
+    right:0;
     transform:rotate(2deg);
 }
