@@ -6,9 +6,10 @@ html,body{
 }
 body{
     margin:0;
-    font-family: sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
     width:100%;
 }
+
 
 h1{
     color: darkblue;
@@ -16,6 +17,9 @@ h1{
     margin:0;
 }
 
+.container{
+    position:relative;
+}
 header{
     position: fixed;/*ヘッダー静止*/
     top:0;
@@ -30,14 +34,17 @@ header{
 }
 
 .header-top{
-display:flex; /*横並びに変えるための操作*/
+display:flex; 
 }
-.header-top p {/*ヘッダーの「中高生向けプログラミング教室」表示*/
+
+.header-left-top{
+display:flex;
+}
+
+.header-left p {/*ヘッダーの「中高生向けプログラミング教室」表示*/
 font-size:14px;
 font-weight: 600;
-margin:0;
-margin-left :20px;
-margin-top: 25px;
+margin:20px 0 3px 20px;
 color:#3d3d3d;
 text-shadow: 4px 4px 4px rgba(0,0,0,0.25);
 white-space:nowrap;
@@ -45,79 +52,44 @@ white-space:nowrap;
 }
 
 header img{/*ヘッダーのロゴ設定*/
-    height:36px;
+    height:30px;
     width:auto;
     margin-left: 50px;
     margin-top: 10px;
 }
 
-.header-top-line {
+.header-top-line {/*ヘッダーの長い灰色の線のこと*/
     margin:0;
-    margin-top:5px;
     margin-left:50px;
-    width: 850px;
+    margin-right:20px;
+    width: 100%;
     height: 2px;
     background-color: #BFBFBF;
 }
-.firstpage {/*ファーストページの背景設定*/
-    
-    width: 100%; /* ファーストビューを画面幅いっぱいにする */
-    min-height: 100vh; /* 画面の高さ以上を確保する */
-
-    background-image: url("./images/ファーストページの背景 (2).svg"); /* 背景画像を読み込む */
-    background-size: cover; /* 背景画像を領域いっぱいに広げる */
-    background-position: center; /* 背景画像を中央に配置する */
-    background-repeat: no-repeat; /* 背景画像を繰り返さない */
-    position: relative; /* absoluteを使う子要素の基準にする */
-
+.header-left{
+    flex:1;
 }
 
-.firstpage-content-behind
-{ position:absolute;/*自分で置く場所を自由に決められる*/
-    top:0;
-    left:0;
-    margin:0;
-    line-height:150px;
-    color:#ffffff;
-    -webkit-text-stroke:10px white;
-    z-index:1;
-
-}
-    
-    
-.firstpage-content{/*コードを書く手が、止まらない*/
-    position:relative;/*自分で置く場所を自由に決められる*/
-    margin:0;
-    color:#3255FD;
-    z-index:2;
-    font-size:80px;
-    font-family:sans-serif;
-    font-weight:900;
-    line-height :150px;
-    z-index:100;
-    margin-left:50px;
-    text-align: left;
-    padding-top: 190px;
-
-
-    
+.header-right{
+    width:auto;
+    display:flex;
+    gap:10px;
+    padding:10px 80px 0 20px;
 }
 
-*{
-    box-sizing:border-box;
-}
 .menu{
     width:100%;
     display:flex;
     gap:6px;
     list-style:none; /*リストマークを削除する*/
-    padding:0 80px 0 50px;
+    padding:15px 80px 0 50px;
     margin:0;
 }
 .menu p{
     width:100%;
-    margin:10px 0 0;
-    font-family:"Hammersmith One", sans-serif;;
+    margin:0;
+    padding:0 0 5px 0;
+    font-family: "Halant", "Noto Sans JP", sans-serif;
     color:#3d3d3d;
     text-align:center;
     font-size:14px;
@@ -144,11 +116,36 @@ header img{/*ヘッダーのロゴ設定*/
 
 }
 
-.header-buttons{
-    width:auto;
-    display:flex;
-    gap:10px;
-    padding:17px 80px 0 500px;
+.firstpage {/*ファーストページの背景設定*/
+    
+    width: 100%; /* ファーストビューを画面幅いっぱいにする */
+    min-height: 100vh; /* 画面の高さ以上を確保する */
+
+    background-image: url("./images/ファーストページの背景 (2).svg"); /* 背景画像を読み込む */
+    background-size: cover; /* 背景画像を領域いっぱいに広げる */
+    background-position: center; /* 背景画像を中央に配置する */
+    background-repeat: no-repeat; /* 背景画像を繰り返さない */
+    position: relative; /* absoluteを使う子要素の基準にする */
+
+}
+
+.firstpage-content{/*コードを書く手が、止まらない*/
+    position:relative;/*自分で置く場所を自由に決められる*/
+    margin:0;
+    color:#3255FD;
+    z-index:2;
+    font-size:70px;
+    font-family:"Noto Serif JP", serif;
+    font-weight:800;
+    line-height :150px;
+    z-index:100;
+    padding-left:90px;
+    text-align: left;
+    padding-top: 130px;
+}
+
+*{
+    box-sizing:border-box;
 }
 
 .CTAボタン,.Download-button{
@@ -184,8 +181,8 @@ border:0.5px solid #007BFF;
     font-weight:500;
     font-size:30px;
     line-height:60px;
-    padding-top:80px;
-    padding-left:50px;
+    padding-top:30px;
+    padding-left:90px;
 }
 
 .firstpage{
@@ -196,22 +193,22 @@ border:0.5px solid #007BFF;
    margin-top:40px;
    margin-left:50px;
 
+
 }
 
+
 .advertisement{
+    position:relative;
     width: 100%; /* ファーストビューを画面幅いっぱいにする */
     max-width:100%;
-    background-image: url("./images/ファーストページの背景 (2).svg"); 
     background-size: cover; /* 背景画像を領域いっぱいに広げる */
     background-position: center; /* 背景画像を中央に配置する */
     background-repeat: no-repeat; /* 背景画像を繰り返さない */
-    position: relative;
     overflow:hidden;
 }
-.advertisement img{
+.advertisement-background > img{
     display:block;
     width: 100%;
-    max-width:100%;
     height:auto;
 }
 
@@ -220,15 +217,14 @@ border:0.5px solid #007BFF;
     top:50px;
     left:8%;
     margin:0;
-    max-width:40%;
 }
 
-.夏季特別プログラムのタイトル{
+.夏季特別プログラムのタイトル1, .夏季特別プログラムのタイトル2{
     position:relative;
-    margin:0;
+    width:fit-content;
 }
 
-.夏季特別プログラムのタイトル p{
+.夏季特別プログラムのタイトル1 p, .夏季特別プログラムのタイトル2 p{
     position:relative;
     margin:0;
     color:#3255FD;
@@ -236,33 +232,47 @@ border:0.5px solid #007BFF;
     font-family:sans-serif;
     font-weight:900;
     line-height :120px;
-    z-index:100;
-    text-align: left;  
+    z-index:100;  
     transform:rotate(-4deg);
 }
 
 .夏季特別プログラムの強調線{
-    margin:0;
     position:absolute;
-    width:380px;
     height:55px;
-    background-color:#ffffff;
+    background:#ffffff;
     z-index:50;
-    top:60px;
-    right:50px;
     transform:rotate(-4deg);
+
+}
+.夏季特別プログラムの強調線1{
+    width:330px;
+    top:60px;
+    left:0px;
+    
 }
 
+.夏季特別プログラムの強調線2{
+    width:410px;
+    top:60px;
+    left:0px;
+
+}
 .広告上のキャッチコピー{
     margin:0;
     position:absolute;
-    top:120px;
+    top:50px;
     right:5%;
     width:45%;
     max-width:600px;
+
 }
 
+.キャッチコピーのタイトル1, .キャッチコピーのタイトル2{
+    position:relative;
+    width:fit-content;
+}
 .広告上のキャッチコピー p{
+    position:relative;
     margin:0;
     font-size:45px;
     color:#3d3d3d;
@@ -276,12 +286,208 @@ border:0.5px solid #007BFF;
 
 .キャッチコピーの強調線{
     position:absolute;
-    width:100%;
-    max-width: 560px;
     height:30px;
-    background-color:#B7eeff;
+    background:#B7eeff;
     z-index:50;
-    bottom:30px;
-    right:0;
     transform:rotate(2deg);
+}
+
+.キャッチコピーの強調線1{
+    width:515px;
+    top:30px;
+    left:0px
+
+}
+
+.キャッチコピーの強調線2{
+    width:350px;
+    top:30px;
+    left:0px
+
+}
+
+.プログラム期間の箱{
+    display:flex;
+    position:absolute;
+    left:8%;
+    bottom:10%;
+    padding:0;
+    margin-top:70px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.プログラム期間の箱 p{
+    font-size:14px;
+    font-weight: 500;
+    margin:0;
+    padding:30px 25px 30px 30px;
+
+}
+.プログラム期間{
+    color:#3255FD;
+    font-size:50px;
+    font-weight: 900;
+    margin-right:20px;
+    margin-bottom: 10px;
+}
+
+.advertisement-bottom{
+    display:flex;
+}
+
+.広告上の写真{
+    position:absolute;
+    right:0;
+    bottom:0;
+    width: 45%;
+    z-index:20;
+}
+
+.広告上の写真 img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.プログラム期間の箱{
+    position:absolute;
+    left:8%;
+    bottom:10%;
+    z-index:30;
+}
+
+.recommendation{
+    width: 100%; /* ファーストビューを画面幅いっぱいにする */
+    max-width:100%;
+    background-size: cover; /* 背景画像を領域いっぱいに広げる */
+    background-position: center; /* 背景画像を中央に配置する */
+    background-repeat: no-repeat; /* 背景画像を繰り返さない */
+    overflow:hidden;
+    background-color: #EDF6FF;
+}
+.recommendation img{
+    display:block;
+    width: 100%;
+    height:auto;
+}
+
+.recommendation-title h2, .recommendation-title p{
+    margin-top:50px;
+    text-align:center;
+}
+.recommendation-title h2{
+    color:#3255FD;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top:60px;
+    margin-bottom:25px;
+}
+.recommendation-title p{
+    color:#000000;
+    font-size:18px;
+    font-weight:400;
+    margin:25px;
+}
+
+.recommendation-lists{
+    display:flex;
+    gap: 40px;
+    margin-top:50px;
+    padding-bottom:50px;
+    justify-content:center;
+}
+.recommendation-card{
+    position:relative;
+    font-size:25px;
+    font-weight:700;
+    color: #545454;
+}
+.recommendation-card img{
+    width:100%;
+}
+.recommendation-card span{
+    width:100%;
+    position:absolute;
+    top:4%;
+    left:7%;
+    font-size:75px;
+    font-weight:800;
+    color:#2A91ff;
+}
+.recommendation-card p{
+    width:100%;
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+}
+
+.strength{
+    background-color:#EDF6FF;
+    width:100%;
+    /*margin:0;
+    padding:0;*/
+
+}
+.strength-title h2, .strength-title p{
+    /*margin-top:50px;*/
+    text-align:center;
+}
+.strength-title h2{
+    color:#3255FD;
+    font-size: 30px;
+    font-weight: 700;
+    padding-top:60px;
+    /*margin-bottom:25px;*/
+    margin:0;
+}
+
+.strength-title p{
+    color:#000000;
+    font-size:18px;
+    font-weight:400;
+    margin:25px;
+}
+
+.strength-reasons{
+    flex-direction:column;
+}
+
+.reason-card{
+    display:flex;
+    background-color:#ffffff;
+    border-top-left-radius:20px;
+    border-top-right-radius:0;
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:20px;
+    padding:20px;
+    width:180%;
+    z-index:10;
+    margin-top:50px;
+    height:30%;
+
+}
+
+.reason-card span{
+    color:#3255FD;
+    font-size:40px;
+    font-weight:800;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.reason-card p{
+    color:#3d3d3d;
+    font-weight:500;
+    font-size:16px;
+
+}
+
+.reason-card:nth-child(2){
+    margin-left:120px;
+}
+.reason-card:nth-child(1){
+    margin-left:60px;
 }

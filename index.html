@@ -5,18 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LP研修</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Halant:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Halant:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-    <div class="header-top">
-        <img src="images/image 8.svg" alt="ロゴ">
-        <p>中高生向けプログラミング教室</p>
-        <div class="header-buttons">
-        <button class="CTAボタン">体験講座を申し込む</button>
-        <button class="Download-button">資料ダウンロード</button>
-    </div></div>
-    <ul class="menu">
+    <div class="container">
+      <div class="header-top">
+        <div class="header-left">
+            <div class="header-left-top"><img src="images/image 8.svg" alt="ロゴ">
+            <p>中高生向けプログラミング教室</p>
+            </div>
+            
+            <div class="header-top-line"></div>
+        </div>
+        
+        <div class="header-right">
+          <button class="CTAボタン">体験講座を申し込む</button>
+          <button class="Download-button">資料ダウンロード</button></div>    
+      </div>
+
+      <ul class="menu">
         <li>    
         <p>Top</p><div class="line"></div>
         </li>
@@ -38,35 +51,85 @@
         <li>
         <p>お問い合わせ・フォーム</p><div class="line"></div>
         </li>
-    </ul>
+      </ul>
+    </div>
  </header>
 
  <section class="firstpage">
-    <h1 class="firstpage-content">
+    <div class="container">
+        <h1 class="firstpage-content">
         コードを書く手が、<br>止まらない。</h1>
-    <div class="firstpage-explain">
+        <div class="firstpage-explain">
         この夏、新しい一歩を。<br>未経験でも安心。<br>現役大学生と学ぶ、<br>中高生向けプログラミング教室。
-    </div>
+        </div>
 
-    <div class="firstpage-button">
-    <button class="CTAボタン">体験講座を申し込む</button>
+        <div class="firstpage-button">
+           <button class="CTAボタン">体験講座を申し込む</button>
+        </div>
     </div>
  </section>
 
  <section class="advertisement">
-    <img src="images/ChatGPT Image 2026年7月8日 08_57_27 1.svg" alt="広告の背景">
-        <div class="夏季特別プログラムのファーストビュー">
-            <div class="夏季特別プログラムのタイトル"><p>夏季特別<br>プログラム</p></div><div class="夏季特別プログラムの強調線"></div>
-        </div>
+    <div class="container">
+           <div class="advertisement-background"><img src="images/ChatGPT Image 2026年7月8日 08_57_27 1.svg" alt="広告の背景"></div>
+    <div class="夏季特別プログラムのファーストビュー">
+            <div class="夏季特別プログラムのタイトル1"><p>夏季特別</p>
+                <div class="夏季特別プログラムの強調線 夏季特別プログラムの強調線1"></div>
+            </div>
+            <div class="夏季特別プログラムのタイトル2"><p>プログラム</p>
+                <div class="夏季特別プログラムの強調線 夏季特別プログラムの強調線2"></div>
+            </div>
+    </div>
 
-        <div class="広告上のキャッチコピー">
-            <p>未来は、体験から始まる。<br>体験授業受付中！</p><div class="キャッチコピーの強調線"></div>
+  <div class="広告上のキャッチコピー">
+        <div class="キャッチコピーのタイトル1"><p>未来は、体験から始まる。</p>
+                <div class="キャッチコピーの強調線 キャッチコピーの強調線1"></div>
         </div>
-        
-        <div class="プログラム期間の箱">プログラム期間
+        <div class="キャッチコピーのタイトル2"><p>体験授業受付中！</p>
+                <div class="キャッチコピーの強調線 キャッチコピーの強調線2"></div>
+        </div>
+    </div>
+    <div class="advertisement-bottom">
+        <div class="プログラム期間の箱">
+            <p>プログラム期間</p>
             <div class="プログラム期間">7月11日(土)~8月16日(日)</div>
         </div>
+        
+        <div class="広告上の写真">
+            <img src="images/夏季特別プログラム上の写真 (2).svg" alt="パソコンを使う中高生">
+        </div>
+    </div>
+  </div>
             
+ </section>
+
+ <section class="recommendation">
+    <div class="container">
+        <div class="recommendation-title"><h2>こんな方へおすすめ</h2>
+            <p>以下のような方に、BeEngineerのプログラミング教室への参加はおすすめです。</p>
+        </div>
+
+        <div class="recommendation-lists">
+            <div class="recommendation-card"><img src="images/こんな方へおすすめ、チェック.svg" alt="おすすめ1人目"><span>✔</span><p>新しいことに<br>挑戦してみたい人</p></div>
+            <div class="recommendation-card"><img src="images/おすすめ2人目.svg" alt="おすすめ2人目"><span>✔</span><p>考えるのが好きな人</p></div>
+            <div class="recommendation-card"><img src="images/おすすめ3人目.svg" alt="おすすめ3人目"><span>✔</span><p>将来役立つスキルを<br>磨きたい人</p></div>
+        </div>
+    </div>
+ </section>
+
+ <section class="strength">
+    <div class="container">
+        <div class="strength-title"><h2>BeEnginnerの強み</h2>
+            <p>未来につながる学びを支える、私たちの特徴をご紹介します。</p>
+        </div>
+
+        <div class="strength-reasons">
+            <div class="reason-card"><span>01</span><p>プログラミングに触れたことがない方でも始められる少人数制、段階的な講座設定</p></div>
+            <div class="reason-card"><span>02</span><p>エンジニア教育を手掛けるIT企業と、全国展開する教育企業による共同事業</p></div>
+            <div class="reason-card"><span>03</span><p>アプリ・ゲーム・Web開発を学べる3講座と、常に更新されるWeb教材</p></div>
+        </div>
+
+    </div>
  </section>
     <script src="script.js"></script>
 </body>
